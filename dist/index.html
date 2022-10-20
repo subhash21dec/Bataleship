@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOP | Battleships</title>
+
+    <script
+      src="https://kit.fontawesome.com/48e9ba994a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <section class="page page1">
+        <h1>Battleships</h1>
+        <form action="#" autocomplete="off">
+          <label for="username">Enter your username:</label>
+          <input type="text" name="username" id="username" />
+          <ul class="err-msg"></ul>
+          <button type="button" class="btn-primary" id="btn-username">
+            <i class="fa-solid fa-arrow-right-long fa-2x"></i>
+          </button>
+        </form>
+      </section>
+
+      <section class="page page2 hidden">
+        <h1>Get ready for battle</h1>
+        <p>Place your ships</p>
+        <canvas class="board"></canvas>
+        <div class="overlay hidden"></div>
+
+        <button type="button" id="btn-to-page3" class="btn-primary hidden">
+          Let's battle!
+        </button>
+        <div class="container">
+          <p>Ships to place (click to rotate, drag to place)</p>
+          <div class="ship-container"></div>
+          <div class="ship-container"></div>
+          <div class="ship-container"></div>
+          <div class="ship-container"></div>
+          <div class="ship-container"></div>
+        </div>
+      </section>
+
+      <section class="page page3 hidden">
+        <h1>Battle</h1>
+        <div class="key">
+          <div class="key-item">
+            <div class="square miss"></div>
+            = miss
+          </div>
+          <div class="key-item">
+            <div class="square hit"></div>
+            = hit
+          </div>
+          <div class="key-item">
+            <div class="square sunk"></div>
+            = sunk
+          </div>
+        </div>
+        <div class="container">
+          <div class="player">
+            <p>Player</p>
+            <canvas></canvas>
+            <div class="overlay hidden"></div>
+          </div>
+          <div class="AI">
+            <p>AI</p>
+            <canvas></canvas>
+            <div class="overlay hidden"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page page4 hidden">
+        <h1>Gameover</h1>
+        <h2 class="winner"></h2>
+        <p class="remaining-ships">Ships remaining:</p>
+        <div class="btn-group">
+          <button type="button" id="rematch-btn" class="btn-primary">
+            Rematch
+          </button>
+          <button type="button" id="new-player-btn" class="btn-secondary">
+            New Player
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
